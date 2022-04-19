@@ -1,0 +1,19 @@
+{
+  "name": "datefr",
+  "version": "1.0.0",
+  "description": "Date utils for french format",
+  "main": "main.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "date",
+    "french",
+    "format"
+  ],
+  "author": "Kilian Davies",
+  "license": "ISC"
+}
