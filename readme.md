@@ -2,10 +2,10 @@
 
 ## Utility
 
-Two main features :
+This package can be used to :
 
-- Formats a date from a set of formats to the main French format
-- Extracts all dates from a given string and formats them to the main French format
+- Format a date from a set of formats to the main French format
+- Extract all dates from a given string, formatting them to the main French format
 
 ## Installation
 
@@ -27,15 +27,15 @@ require("datefr")
 
 Below is the list of the formats that can be parsed by the package.
 
-> [x] means that x is optional
->
-> \* can be one either '\' or '/' or ' ' or '.' or ':' or '-'
-
 - ddmmyy[yy]
 - d[d]\*m[m]\*yy[yy]
 - yy[yy]\*m[m]\*d[d]
 - d[d]\*mmmm\*yy[yy]
 - mmmm\*yy[yy]
+
+> [x] means that x is optional
+>
+> \* can be one either a backslash, a slash, a space, a dot, a semi-colon or a hyphen
 
 ### `String.prototype.toDateString()`
 
@@ -43,7 +43,7 @@ Below is the list of the formats that can be parsed by the package.
 require("datefr")
 
 const date = "30 janvier 2022"
-date.toDateString() // Expected output: 30/01/2022
+date.toDateString() // Expected output: '30/01/2022'
 ```
 
 ### `String.prototype.extractDates()`
