@@ -62,7 +62,7 @@ console.log(string.extractDates()) // Expected output: ['25/12/2021', '01/2022']
 require("datefr")
 
 const string = "5 jan 2010"
-console.log(string.extractDates()) // Expected output: 2010-01-05T00:00:00.000Z
+console.log(string.toDateObject()) // Expected output: 2010-01-05T00:00:00.000Z
 ```
 
 > Note that the date object thus created will always have the time set as 00:00:00.000Z
