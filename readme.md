@@ -8,6 +8,8 @@ This package can be used to :
 - Extract all dates from a given string, formatting them to the main French format
 - Convert a date string that the default Date constructor couldn't parse to a JS Date object
 - Calculate the time between two dates
+- Compare dates
+- GEt max and min dates in arrays
 
 ## Installation
 
@@ -31,7 +33,7 @@ Below is the list of the formats that can be parsed by the package.
 
 - ddmmyy[yy]
 - d[d]\*m[m]\*yy[yy]
-- yy[yy]\*m[m]\*d[d]
+- yyyy\*m[m]\*d[d]
 - d[d]\*mmmm\*yy[yy]
 - mmmm\*yy[yy]
 
@@ -93,3 +95,51 @@ console.log(string.diffDate("01/05/2022", false, "s")) // Expected output : 5996
 > - m : processes the difference in minutes
 > - h : processes the difference in hours
 > - d : processes the difference in days (default)
+
+### `String.prototype.getMaxDate(date)`
+
+```js
+require("datefr")
+
+const string = "1 may 2003"
+console.log(string.diffDate("01/05/2022")) // Expected output : '01/05/2022'
+```
+
+### `String.prototype.getMinDate(date)`
+
+```js
+require("datefr")
+
+const string = "1 may 2003"
+console.log(string.diffDate("01/05/2022")) // Expected output : '01/05/2003'
+```
+
+### `Array.prototype.getMaxDate(?key)`
+
+```js
+require("datefr")
+
+const array = ["1 may 2003", "010522", "2001-05-22"]
+const arrayObj = [
+	{ name: "Cindy", birthday: "1 may 2003" },
+	{ name: "Ryan", birthday: "010522" },
+	{ name: "John", birthday: "2001-05-22" },
+]
+console.log(array.getMaxDate()) // Expected output : '01/05/2022'
+console.log(arrayObj.getMaxDate("birthday")) // Expected output : '01/05/2022'
+```
+
+### `Array.prototype.getMinDate(?key)`
+
+```js
+require("datefr")
+
+const array = ["1 may 2003", "010522", "2001-05-22"]
+const arrayObj = [
+	{ name: "Cindy", birthday: "1 may 2003" },
+	{ name: "Ryan", birthday: "010522" },
+	{ name: "John", birthday: "2001-05-22" },
+]
+console.log(array.getMinDate()) // Expected output : '22/05/2001'
+console.log(arrayObj.getMinDate("birthday")) // Expected output : '01/05/2022'
+```
