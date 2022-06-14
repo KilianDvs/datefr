@@ -102,7 +102,7 @@ console.log(string.diffDate("01/05/2022", false, "s")) // Expected output : 5996
 require("datefr")
 
 const string = "1 may 2003"
-console.log(string.diffDate("01/05/2022")) // Expected output : '01/05/2022'
+console.log(string.getMaxDate("01/05/2022")) // Expected output : '01/05/2022'
 ```
 
 ### `String.prototype.getMinDate(date)`
@@ -111,7 +111,7 @@ console.log(string.diffDate("01/05/2022")) // Expected output : '01/05/2022'
 require("datefr")
 
 const string = "1 may 2003"
-console.log(string.diffDate("01/05/2022")) // Expected output : '01/05/2003'
+console.log(string.getMinDate("01/05/2022")) // Expected output : '01/05/2003'
 ```
 
 ### `Array.prototype.getMaxDate(?key)`
