@@ -141,5 +141,5 @@ const arrayObj = [
 	{ name: "John", birthday: "2001-05-22" },
 ]
 console.log(array.getMinDate()) // Expected output : '22/05/2001'
-console.log(arrayObj.getMinDate("birthday")) // Expected output : '01/05/2022'
+console.log(arrayObj.getMinDate("birthday")) // Expected output : '22/05/2001'
 ```
