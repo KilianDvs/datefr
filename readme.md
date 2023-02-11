@@ -9,7 +9,7 @@ This package can be used to :
 - Convert a date string that the default Date constructor couldn't parse to a JS Date object
 - Calculate the time between two dates
 - Compare dates
-- GEt max and min dates in arrays
+- Get max and min dates in arrays
 
 ## Installation
 
@@ -39,7 +39,7 @@ Below is the list of the formats that can be parsed by the package.
 
 > [x] means that x is optional
 >
-> \* can be one either a backslash, a slash, a space, a dot, a semi-colon or a hyphen
+> \* can be one of the following: a backslash, a slash, a space, a dot, a semi-colon or a hyphen
 
 ### `String.prototype.toDateString()`
 
